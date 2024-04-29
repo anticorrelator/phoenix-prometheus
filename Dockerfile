@@ -4,11 +4,11 @@ FROM prom/prometheus
 COPY prometheus.yml.template /etc/prometheus/prometheus.yml.template
 COPY entrypoint.sh /etc/prometheus/entrypoint.sh
 
-RUN chmod +x /etc/prometheus/entrypoint.sh
-
 EXPOSE 9090
 
 USER root
+
+RUN chmod +x /etc/prometheus/entrypoint.sh
 
 ENTRYPOINT ["/etc/prometheus/entrypoint.sh"]
 CMD ["--config.file=/etc/prometheus/prometheus.yml", \
