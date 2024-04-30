@@ -1,7 +1,5 @@
 #!/bin/sh
 
-curl "http://$POSTGRES_PHOENIX_URL:9090/metrics"
-
 sed -e "s|POSTGRES_PHOENIX_URL|$POSTGRES_PHOENIX_URL|g" \
     -e "s|SQLITE_PHOENIX_URL|$SQLITE_PHOENIX_URL|g" \
     /etc/prometheus/prometheus.yml.template > /etc/prometheus/prometheus.yml
