@@ -9,7 +9,7 @@ EXPOSE 9090
 USER root
 
 RUN chmod +x /etc/prometheus/entrypoint.sh
-RUN apt-get update && apt-get install -y curl
+RUN apk --no-cache add curl
 
 ENTRYPOINT ["/etc/prometheus/entrypoint.sh"]
 CMD ["--config.file=/etc/prometheus/prometheus.yml", \
