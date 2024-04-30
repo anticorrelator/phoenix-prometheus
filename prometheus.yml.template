@@ -21,9 +21,9 @@ scrape_configs:
   - job_name: "postgres"
     scrape_interval: 5s
     static_configs:
-      - targets: ["${POSTGRES_PHOENIX_URL}"]
+      - targets: ["POSTGRES_PHOENIX_URL"]
 
   - job_name: "sqlite"
     scrape_interval: 5s
     static_configs:
-      - targets: ["${SQLITE_PHOENIX_URL}"]
+      - targets: ["SQLITE_PHOENIX_URL"]
