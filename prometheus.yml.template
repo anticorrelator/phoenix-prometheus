@@ -18,12 +18,12 @@ scrape_configs:
     static_configs:
       - targets: ["localhost:9090"]
 
-  - job_name: "postgres"
+  - job_name: "auth"
     scrape_interval: 5s
     static_configs:
-      - targets: ["POSTGRES_PHOENIX_URL"]
+      - targets: ["AUTH_PHOENIX_URL"]
 
-  - job_name: "sqlite"
+  - job_name: "noauth"
     scrape_interval: 5s
     static_configs:
-      - targets: ["SQLITE_PHOENIX_URL"]
+      - targets: ["NOAUTH_PHOENIX_URL"]
