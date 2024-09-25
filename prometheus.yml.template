@@ -26,4 +26,4 @@ scrape_configs:
   - job_name: "noauth"
     scrape_interval: 5s
     static_configs:
-      - targets: ["NOAUTH_PHOENIX_URL"]
+      - targets: ["BASELINE_PHOENIX_URL"]
