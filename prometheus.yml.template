@@ -18,12 +18,8 @@ scrape_configs:
     static_configs:
       - targets: ["localhost:9090"]
 
-  - job_name: "auth"
+  - job_name: "phoenix"
     scrape_interval: 5s
     static_configs:
-      - targets: ["AUTH_PHOENIX_URL"]
+      - targets: ["PHOENIX_URL"]
 
-  - job_name: "noauth"
-    scrape_interval: 5s
-    static_configs:
-      - targets: ["BASELINE_PHOENIX_URL"]
